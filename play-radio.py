@@ -8,14 +8,11 @@ import subprocess
 import requests
 from pyfzf.pyfzf import FzfPrompt
 
-#TODO: add exclusive groups to arguments
+# TODO: add exclusive groups to arguments
 def arguments():
-    parser = argparse.ArgumentParser(
-            description="I am playing radio")
-    parser.add_argument("-r", "--refresh",
-                        action="store_true")
-    parser.add_argument("-p", "--play",
-                        action="store_true")
+    parser = argparse.ArgumentParser(description="I am playing radio")
+    parser.add_argument("-r", "--refresh", action="store_true")
+    parser.add_argument("-p", "--play", action="store_true")
     parser.add_argument("-t", "--tagplay")
     return parser.parse_args()
 
@@ -75,4 +72,3 @@ def main(args):
 
 if __name__ == "__main__":
     main(arguments())
-
